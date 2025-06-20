@@ -70,6 +70,8 @@ router.get('/mine/dogs', async (req, res) => {
       [req.session.user.user.user_id]
     );
     res.json(rows);
+  } catch (error) {
+    res.status(500).json({})
   }
 })
 
