@@ -116,13 +116,13 @@
                 this.error = 'Unkown role'; // input sanitization
               }
             }
-          } catch (err) { // handle network or server errors
-            this.error = 'Network error';
-        }
+          } catch (err) {
+        this.error = 'Network error';
       }
-    },
-    mounted() {
-      this.loadDogsWithImages();
+    }
+  },
+  mounted() {
+    this.loadDogsWithImages();
   }
 });
 
