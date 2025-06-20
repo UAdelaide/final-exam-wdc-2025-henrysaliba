@@ -72,7 +72,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 
-app.get('/api/walkrequests/open', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
     try {
         const connection = await mysql.createConnection(dbConfig);
         const [rows] = await connection.execute(`
