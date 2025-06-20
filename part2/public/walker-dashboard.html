@@ -71,7 +71,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            if (!walker)
+            if (!walkerId.value) throw new Error('Walker not loaded');
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
