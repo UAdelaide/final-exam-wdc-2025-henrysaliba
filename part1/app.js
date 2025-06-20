@@ -12,5 +12,5 @@ const dbConfig = {
 };
 
 async function insertTestData(connection) {
-    
+    await connection.execute(``)
 }
