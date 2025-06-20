@@ -83,7 +83,9 @@ router.get('/all/dogs', async (req, res) => {
       JOIN Users ON Dogs.owner_id = Users.user_id
       `);
       res.json(rows);
-    } catch (err)
+    } catch (err) {
+      res.status(500).json({ error: 'Failed to fetch dogs' });
+    }
   }
 
 module.exports = router;
