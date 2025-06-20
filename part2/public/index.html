@@ -61,9 +61,11 @@
                 const imgData = await imgRes.json();
                 return { ...dog, image: imgData.message };
               } catch {
-                return
+                return { ...dog, image: '' }; // fallback
               }
-            }))
+            }));
+          } catch (err) {
+            
           }
         }
 
