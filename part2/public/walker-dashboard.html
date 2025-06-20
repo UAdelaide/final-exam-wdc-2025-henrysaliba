@@ -78,7 +78,7 @@
         }
 
         asyn function logout() {
-          
+          await fetch('/api/users/logout')
         }
 
         onMounted(() => {
