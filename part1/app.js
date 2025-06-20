@@ -101,9 +101,8 @@ app.listen(port, async () => {
     try {
         const connection = await mysql.createConnection(dbConfig);
         await insertTestData(connection);
-        console.log('Test data inserted.');
+        console.log('Test data is inserted.');
     } catch (err) {
-        console.error('Error inserting the test data')
+        console.error('Error inserting the test data', err);
     }
-
-}
+});
