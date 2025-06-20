@@ -44,5 +44,7 @@ app.get('/api/dogs', async (req, res) => {
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
         res.json(rows);
+    } catch (err) {
+        res.status(500)
     }
 }
