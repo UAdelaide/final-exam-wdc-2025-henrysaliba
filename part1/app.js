@@ -70,3 +70,26 @@ app.get('/api/walkrequests/open', async (req, res) => {
         res.status(500).json({ error: "Failed to fetch dogs" });
     }
 });
+
+
+app.get('/api/walkrequests/open', async (req, res) => {
+    try {
+        const connection = await mysql.createConnection(dbConfig);
+        const [rows] = await connection.execute(`
+            SELECT
+                WalkReuests.request_id,
+                Dogs.name AS Dog_name,
+                WalkRequests.requested_time,
+                WalkRequests.duration_muntes,
+                WalkRequests.location,
+                Users.username AS owner_username
+            FROM WalkRequests
+            JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+            JOIN Users ON Dogs.owner_id = Users.user_id
+            WHERE WalkRequests.status = 'open'
+        `);
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch dogs" });
+    }
+});
