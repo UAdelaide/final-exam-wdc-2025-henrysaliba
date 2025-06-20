@@ -58,7 +58,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
                 Dogs.name AS Dog_name,
                 WalkRequests.requested_time,
                 WalkRequests.duration_muntes,
-                WalkRequests
+                WalkRequests.location,
+                Users.username AS owner_username
+            FROM
+                
         `);
         res.json(rows);
     } catch (err) {
