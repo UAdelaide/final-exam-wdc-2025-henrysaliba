@@ -22,7 +22,7 @@
         <label class="form-label">Password</label>
         <input type="password" class="form-control" v-model="password" required>
       </div>
-      <div></div>
+      <div class="text-danger mb-2" v-if="error"></div>
   </div>
 
   <script>
