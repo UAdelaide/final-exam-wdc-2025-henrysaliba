@@ -54,7 +54,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
         const connection = await mysql.createConnection(dbConfig);
         const [rows] = await connection.execute(`
             SELECT
-                WalkReuests.request_id,
+                WalkRequests.request_id,
                 Dogs.name AS Dog_name,
                 WalkRequests.requested_time,
                 WalkRequests.duration_muntes,
