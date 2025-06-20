@@ -14,7 +14,9 @@ const dbConfig = {
 async function insertTestData(connection) {
     await connection.execute(`DELETE FROM WalkRatings`);
     await connection.execute(`DELETE FROM WalkApplications`);
-    await connection.execute(`DELETE FROM WalkRatings`);
-    await connection.execute(`DELETE FROM WalkRatings`);
+    await connection.execute(`DELETE FROM WalkRequests`);
+    await connection.execute(`DELETE FROM Dogs`);
+    await connection.execute(`DELETE FROM Users`);
+
     await connection.execute(`DELETE FROM WalkRatings`);
 }
