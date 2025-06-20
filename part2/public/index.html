@@ -55,7 +55,7 @@
             const res = await fetch('/api/dogs');
             const dogsData = await res.json();
 
-            
+            this.dogs = await Promise.all(dogsData)
           }
         }
 
