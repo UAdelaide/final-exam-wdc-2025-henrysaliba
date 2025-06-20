@@ -65,7 +65,7 @@ router.get('/mine/dogs', async (req, res) => {
   }
 
   try {
-    const [rows] = await db
+    const [rows] = await db.query
   }
 })
 
