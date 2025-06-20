@@ -75,6 +75,9 @@ router.get('/mine/dogs', async (req, res) => {
   }
 });
 
-router.get('dogs', async (req, res) => {
+router.get('/all/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query
+  }
 
 module.exports = router;
