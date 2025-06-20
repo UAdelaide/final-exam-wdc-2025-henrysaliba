@@ -11,4 +11,6 @@ const dbConfig = {
     database: 'DogWalkService'
 };
 
-/
+async function insertTestData(connection) {
+    
+}
