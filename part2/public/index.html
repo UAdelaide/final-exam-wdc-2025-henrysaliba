@@ -50,7 +50,11 @@
         };
       },
       methods: {
-        async loadDogsWithImages
+        async loadDogsWithImages() {
+          try {
+            const res = await fetch('/api/dogs')
+          }
+        }
 
         async login() {
           this.error = '';
