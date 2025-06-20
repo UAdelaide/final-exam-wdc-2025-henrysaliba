@@ -55,7 +55,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
         const [rows] = await connection.execute(`
             SELECT
                 WalkReuests.request_id,
-                
+                Dogs.name AS Dog_name,
+                WalkRequests.requested
         `);
         res.json(rows);
     } catch (err) {
