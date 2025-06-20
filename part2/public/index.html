@@ -66,9 +66,9 @@
             if (!res.ok) {
               this.error = data.error || 'Login failed';
             } else { // else valid
-              if (data.user.role === 'owner') {
+              if (data.user.role === 'owner') { // redirect owners to their page
                 window.location.href = 'owner-dashboard.html';
-              } else if (data.user.role === 'walker') {
+              } else if (data.user.role === 'walker') { // redirect walkers to their page
                 window.location.href = 'walker-dashboard.html';
               } else {
                 this.error = 'Unkown role';
