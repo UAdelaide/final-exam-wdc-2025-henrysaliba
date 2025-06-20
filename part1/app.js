@@ -5,5 +5,8 @@ const port = 8080;
 
 // database configuation
 const dbConfig = {
-    host: 'localhost'
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database:
 }
