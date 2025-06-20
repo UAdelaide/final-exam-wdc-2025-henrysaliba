@@ -52,12 +52,14 @@
         async login() {
           this.error = '';
           try {
-            // send a POST req to the login endpouint
+            // send a POST request to the login endpoint with the username and password
             const res = await fetch('/api/users/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ username: this.username, password: this.password })
             });
+
+            // parse 
             const data = await res.json();
 
             if (!res.ok) {
