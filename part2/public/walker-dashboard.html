@@ -48,7 +48,12 @@
         const error = ref('');
         const walkerId = ref(null);
 
-        async function getCurrentUser
+        async function getCurrentUser() {
+          try {
+            const res = await fetch('/api/users/me');
+            
+          }
+        }
 
         async function loadWalkRequests() {
           try {
