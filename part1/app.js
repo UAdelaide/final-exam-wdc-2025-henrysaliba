@@ -77,7 +77,9 @@ app.get('/api/walkers/summary', async (req, res) => {
         const connection = await mysql.createConnection(dbConfig);
         const [rows] = await connection.execute(`
             SELECT
-                u.username AS walker_username
+                u.username AS walker_username,
+                COUNT(r.rating_id) AS total_ratings,
+                ROUND(AVG)
         `);
         res.json(rows);
     } catch (err) {
