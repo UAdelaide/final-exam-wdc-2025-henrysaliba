@@ -28,8 +28,10 @@
         <input type="password" class="form-control" v-model="password" required>
       </div>
 
-      <!-- -->
+      <!-- error message if login fails -->
       <div class="text-danger mb-2" v-if="error">{{ error }}</div>
+
+      <!-- log in button -->
       <button class="btn btn-primary" @click="login">Log In</button>
   </div>
 
