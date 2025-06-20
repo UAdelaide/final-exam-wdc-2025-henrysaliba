@@ -59,6 +59,8 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-router.get('/mine/dogs')
+router.get('/mine/dogs', async (req, res) => {
+  if (!req.session.user)
+})
 
 module.exports = router;
