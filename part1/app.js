@@ -35,4 +35,4 @@ async function insertTestData(connection) {
     `);
 }
 
-app.get(`/api/dogs'`)
+app.get('/api/dogs', async (req))
