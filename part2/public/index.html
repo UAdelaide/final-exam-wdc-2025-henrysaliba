@@ -48,7 +48,7 @@
     <tbody>
       <tr v-for="dogs in dogs" :ley="dog.dog_id">
         <td>
-          <img :src="dog.image" :alt="dog.dog_name" width=""
+          <img :src="dog.image" :alt="dog.dog_name" width="100" height="100" v-if="dog.image"
         </td>
       </tr>
     </tbody>
