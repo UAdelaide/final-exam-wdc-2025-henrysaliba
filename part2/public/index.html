@@ -71,10 +71,11 @@
               } else if (data.user.role === 'walker') { // redirect walkers to their page
                 window.location.href = 'walker-dashboard.html';
               } else {
-                this.error = 'Unkown role';
+                this.error = 'Unkown role'; // input sanitization
               }
             }
           } catch(err) {
+            // handle network or server errors
             this.error = 'Network error';
           }
         }
