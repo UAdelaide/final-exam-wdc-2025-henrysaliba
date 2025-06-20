@@ -78,7 +78,8 @@
         }
 
         asyn function logout() {
-          await fetch('/api/users/logout')
+          await fetch('/api/users/logout', { method: 'POST' });
+          window.location
         }
 
         onMounted(() => {
