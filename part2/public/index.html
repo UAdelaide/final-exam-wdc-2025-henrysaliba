@@ -43,7 +43,9 @@
             if (!res.ok) {
               this.error = data.error || 'Login failed';
             } else {
-              if (data.user.role)
+              if (data.user.role === 'owner') {
+                
+              }
             }
           }
         }
