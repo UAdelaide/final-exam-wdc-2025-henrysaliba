@@ -77,16 +77,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         const connection = await mysql.createConnection(dbConfig);
         const [rows] = await connection.execute(`
             SELECT
-                WalkReuests.request_id,
-                Dogs.name AS Dog_name,
-                WalkRequests.requested_time,
-                WalkRequests.duration_muntes,
-                WalkRequests.location,
-                Users.username AS owner_username
-            FROM WalkRequests
-            JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-            JOIN Users ON Dogs.owner_id = Users.user_id
-            WHERE WalkRequests.status = 'open'
+                u.username AS walker_username
         `);
         res.json(rows);
     } catch (err) {
