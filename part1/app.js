@@ -97,7 +97,7 @@ app.get('/api/walkers/summary', async (req, res) => {
 });
 
 app.listen(port, async () => {
-    console.log(`Server listening on http:localhost:${port}`);
+    console.log(`Server listening on http://localhost:${port}`);
     try {
         const connection = await mysql.createConnection(dbConfig);
         await insertTestData(connection);
