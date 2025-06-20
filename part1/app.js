@@ -103,7 +103,7 @@ app.listen(port, async () => {
         await insertTestData(connection);
         console.log('Test data inserted.');
     } catch (err) {
-        console.error
+        console.error('Error inserting the test data')
     }
 
 }
