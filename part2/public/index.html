@@ -59,9 +59,10 @@
               body: JSON.stringify({ username: this.username, password: this.password })
             });
 
-            // parse 
+            // parse json response from server
             const data = await res.json();
 
+            // handle unsucce
             if (!res.ok) {
               this.error = data.error || 'Login failed';
             } else {
