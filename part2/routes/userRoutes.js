@@ -58,8 +58,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST login with session support
-router.post('/login', async (req, res) => {
+// logout, destroys session and ends login
+router.post('/logout', async (req, res) => {
   const { username, password } = req.body;
 
   try {
