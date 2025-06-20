@@ -37,6 +37,7 @@ async function insertTestData(connection) {
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        
+        const connection = await mysql.createConnection(dbConfig);
+        const [rows]
     }
 }
