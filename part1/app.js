@@ -38,6 +38,10 @@ async function insertTestData(connection) {
 app.get('/api/dogs', async (req, res) => {
     try {
         const connection = await mysql.createConnection(dbConfig);
-        const [rows]
+        const [rows] = await connection.execute(`
+                SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
+                FROM Dogs
+                JOIN Users ON Dogs.owner_id = Users.user_id
+            `)
     }
 }
