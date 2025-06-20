@@ -45,8 +45,14 @@
     </div>
 
     <script>
-        const { create app } = Vue;
-        createApp
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    dogName
+                }
+            }
+        })
     </script>
 
 </body>
